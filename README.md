@@ -1,7 +1,7 @@
 # SMU_MSDS
 MSDS 6306 Homework Repository
 
-This repository was created for the MSDS 6306 class, and is(?) for me to put my completed homework in.
+This repository was created for the MSDS 6306 class, and is for some of my completed homework.
 
 The current topics in this repository is R programming.
 
