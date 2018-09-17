@@ -9,5 +9,5 @@ Sources:
 https://github.com/rudeboybert/fivethirtyeight
 
 Contact Info
-zgill [@] mail [.] smu [.] edu
+zgill [at] mail [dot] smu [dot] edu
 
