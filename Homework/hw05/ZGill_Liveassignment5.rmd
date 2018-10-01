@@ -1,0 +1,68 @@
+---
+title: "Unit 5 Assignment"
+author: "Zackary Gill"
+date: "September 25, 2018"
+output: html_document
+---
+
+#Problem 1
+```{r}
+library(dplyr)
+
+#A
+df <- read.table("yob2016.txt", sep=";")
+colnames(df) <- c("FirstName", "Gender", "NumChildren")
+
+#B
+summary(df)
+str(df)
+
+#C
+wrongnm <- df[ grepl(".*[y]{3}$", df$FirstName), c(1,2,3) ]
+wrongnm
+
+#D
+y2016 <- filter(df, df$FirstName != wrongnm$FirstName)
+```
+
+#Problem 2
+```{r}
+#A
+y2015 <- read.table("yob2015.txt", sep=",")
+colnames(y2015) <- c("FirstName", "Gender", "NumChildren")
+
+#B
+tail(y2015, 10)
+#All the names in these last 10 start with Z, are male names, and only have 5 entries
+
+#C
+final <- merge(y2015, y2016, by=c("FirstName","Gender"), all=FALSE)
+colnames(final) <- c("FirstName", "Gender", "Num2015", "Num2016")
+```
+
+#Problem 3
+```{r}
+#A
+final$Total <- final$Num2015+final$Num2016
+
+#B
+attach(final)
+final <- final[order(-Total),]
+detach(final)
+head(final, 10)
+
+#C
+head(final[final$Gender=="F",], 10)
+
+#D
+ten <- head(final[final$Gender=="F",c(1,5)], 10)
+write.csv( ten, file="topten.csv", row.names=FALSE)
+
+```
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+##6306 Homework 5 Codebook
+
+##ZGill_Liveassignment5.rmd
+This homework is about getting two baby name lists from 2015/2016, merging them, and getting the top 10 most popular female names.
+
+#Objects
+df	Contains the initial data from "yob2016.txt"
+wrongnm	Contains the name that was incorrectly entered into df
+y2016	Contains the fixed data from df
+y2015	Contains the initial data from "yob2015.txt"
+final	Contains the complete merged set of names, gender, number from 2015/2016, and total number
+ten	Contains the 10 most popular female names from the object final
+
+##ZGill_Liveassignment5.html
+A HTML output of the .rmd file.
+
+##topten.csv
+The output .csv file from the .rmd file.
